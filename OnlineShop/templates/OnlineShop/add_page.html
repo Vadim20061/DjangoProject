@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Page</title>
+</head>
+<body>
+<form method="post" action="{% url 'add_page_action' %}">
+    {%csrf_token%}
+    <p>Name<input type="text" name="name"></p>
+    <p>Price
+        <textarea name="price">
+
+    </textarea>
+    </p>
+    <p>Image<input type="text" name="image"></p>
+    <br>
+    <p>Description
+        <textarea name="description">
+
+    </textarea>
+    <br>
+    <input type="submit" value="create">
+</form>
+</body>
+</html>
